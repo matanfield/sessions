@@ -5,11 +5,11 @@ export function TimerDisplay({ formattedTime, status, progress }) {
   const getStatusStyles = () => {
     switch (status) {
       case TIMER_STATUS.RUNNING:
-        return 'text-green-400 timer-running'
+        return 'text-green-500 timer-running'
       case TIMER_STATUS.PAUSED:
-        return 'text-amber-400 timer-paused'
+        return 'text-amber-500 timer-paused'
       case TIMER_STATUS.COMPLETED:
-        return 'text-red-400 timer-completed animate-pulse-slow'
+        return 'text-red-500 timer-completed animate-pulse-slow'
       default:
         return 'text-foreground/80'
     }
@@ -35,9 +35,9 @@ export function TimerDisplay({ formattedTime, status, progress }) {
         <div
           className={cn(
             'w-2 h-2 rounded-full transition-colors',
-            status === TIMER_STATUS.RUNNING && 'bg-green-400 animate-pulse',
-            status === TIMER_STATUS.PAUSED && 'bg-amber-400',
-            status === TIMER_STATUS.COMPLETED && 'bg-red-400 animate-pulse',
+            status === TIMER_STATUS.RUNNING && 'bg-green-500 animate-pulse',
+            status === TIMER_STATUS.PAUSED && 'bg-amber-500',
+            status === TIMER_STATUS.COMPLETED && 'bg-red-500 animate-pulse',
             status === TIMER_STATUS.IDLE && 'bg-muted-foreground/50'
           )}
         />
@@ -62,7 +62,7 @@ export function TimerDisplay({ formattedTime, status, progress }) {
           <div
             className={cn(
               'h-full transition-all duration-1000 ease-linear rounded-full',
-              status === TIMER_STATUS.RUNNING ? 'bg-green-400' : 'bg-amber-400'
+              status === TIMER_STATUS.RUNNING ? 'bg-green-500' : 'bg-amber-500'
             )}
             style={{ width: `${progress}%` }}
           />

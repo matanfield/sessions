@@ -59,9 +59,6 @@ function App() {
         <h1 className="text-3xl sm:text-4xl font-light tracking-[0.3em] text-foreground/90 uppercase">
           Sessions
         </h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Focus. Flow. Finish.
-        </p>
       </header>
 
       {/* Timer Display */}
